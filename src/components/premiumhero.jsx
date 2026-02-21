@@ -1,0 +1,60 @@
+import React, { useEffect, useState } from "react";
+import "./premiumHero.css";
+import Enter from "./enter"
+
+const PremiumHero = () => {
+  const [showBoot, setShowBoot] = useState(true);
+  const [entered, setEntered] = useState(false);
+  const [name, setName] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowBoot(false);
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (entered) {
+    return <Enter name={name} />;
+  }
+
+  return (
+    <section className="hero-wrapper">
+      {showBoot ? (
+        <div className="boot-container">
+          <p className="boot-line delay-1">{">"} Initializing identity...</p>
+          <p className="boot-line delay-2">{">"} User detected.</p>
+        </div>
+      ) : (
+        <div className="hero-card fade-in">
+          <h1 className="hero-title">
+            <span className="glitch" data-text="Hi, I'm Sami">
+              Hi, I'm Sami
+            </span>
+          </h1>
+
+          <div className="input-group">
+            <input
+              type="text"
+              placeholder="What's your name?"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="name-input"
+            />
+
+            <button
+              className="enter-btn"
+              disabled={!name.trim()}
+              onClick={() => setEntered(true)}
+            >
+              Enter
+            </button>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default PremiumHero;

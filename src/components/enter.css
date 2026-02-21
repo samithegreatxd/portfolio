@@ -1,0 +1,150 @@
+/* Container for the enter page */
+.enter-wrapper {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  animation: fadeInEnter 0.8s ease forwards;
+}
+
+/* Card holding all texts */
+.enter-card {
+  text-align: center;
+}
+
+/* Main welcome title */
+.enter-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2rem, 6vw, 4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+/* Glow effect for the first welcome */
+.enter-glow {
+  color: var(--accent-cyan);
+  text-shadow:
+    0 0 8px rgba(124, 243, 255, 0.9),
+    0 0 30px rgba(124, 243, 255, 0.4);
+  animation: pulseGlow 2.5s infinite;
+}
+
+/* Subtext below welcome */
+.enter-sub {
+  margin-top: 1.2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+  max-width: 60ch;
+  line-height: 1.7;
+}
+
+/* Small text under first paragraph */
+.enter-small {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: rgba(155, 183, 212, 0.7);
+}
+
+/* Tap to continue — in-game neon style */
+.enter-tap {
+  display: inline-block;
+  margin-top: 2rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent-cyan);
+  cursor: pointer;
+  text-shadow:
+    0 0 4px rgba(124, 243, 255, 0.8),
+    0 0 12px rgba(124, 243, 255, 0.4);
+  animation: tapPulse 1.8s infinite;
+  transition: all 0.3s ease;
+}
+
+.enter-tap:hover {
+  text-shadow:
+    0 0 8px rgba(124, 243, 255, 1),
+    0 0 20px rgba(124, 243, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* Fade animations for content switch */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Glow pulse keyframes */
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 8px rgba(124, 243, 255, 0.9),
+      0 0 30px rgba(124, 243, 255, 0.4);
+  }
+  50% {
+    text-shadow:
+      0 0 14px rgba(124, 243, 255, 1),
+      0 0 45px rgba(124, 243, 255, 0.6);
+  }
+}
+
+/* Tap-to-continue pulse animation */
+@keyframes tapPulse {
+  0%, 100% {
+    opacity: 0.9;
+    text-shadow:
+      0 0 4px rgba(124, 243, 255, 0.8),
+      0 0 12px rgba(124, 243, 255, 0.4);
+  }
+  50% {
+    opacity: 1;
+    text-shadow:
+      0 0 8px rgba(124, 243, 255, 1),
+      0 0 20px rgba(124, 243, 255, 0.5);
+  }
+}
+
+/* Fade-in for wrapper on page load */
+@keyframes fadeInEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Stage 1 — texts after tapping continue */
+.enter-card.stage-1 .enter-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: 0.12em;
+  color: var(--accent-cyan);
+  text-shadow:
+    0 0 10px rgba(124, 243, 255, 0.8),
+    0 0 25px rgba(124, 243, 255, 0.35);
+  animation: pulseGlow 2.5s infinite;
+}
+
+.enter-card.stage-1 .enter-sub {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  opacity: 0.85;
+  line-height: 1.7;
+  max-width: 60ch;
+}
