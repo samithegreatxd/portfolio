@@ -1,0 +1,71 @@
+/* ================= CONTINUE WRAPPER ================= */
+.continue-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #050810, #0a1424);
+  color: #e6faff;
+}
+
+/* ================= CONTINUE CONTENT ================= */
+/* ================= CONTINUE CONTENT ================= */
+.continue-content {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* Fade up animation for new blocks */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= MIRACLE FADE ================= */
+.miracle-fade {
+  width: 100%;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeInMiracle {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= TITLES ================= */
+.continue-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  background: linear-gradient(90deg, #7cf3ff, #4ee1a0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px rgba(124,243,255,0.4);
+}
+
+.continue-sub {
+  margin-top: 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: #9bb7d4;
+}

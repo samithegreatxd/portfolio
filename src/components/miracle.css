@@ -1,0 +1,77 @@
+/* ================= MIRACLE WRAPPER ================= */
+.miracle-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* ================= MIRACLE CONTENT ================= */
+.miracle-content {
+  text-align: center;
+}
+
+/* ================= MIRACLE TITLES ================= */
+.miracle-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  background: linear-gradient(90deg, #4ee1a0, #7cf3ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px rgba(124,243,255,0.4);
+}
+
+.miracle-sub {
+  margin-top: 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: #9bb7d4;
+}
+.miracle-items p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+.miracle-inputs {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group input {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid rgba(124, 243, 255, 0.3);
+  background: rgba(10, 20, 35, 0.6);
+  color: white;
+}
+
+.calc-btn {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.2rem;
+  background: linear-gradient(90deg, var(--accent-cyan), #00b4ff);
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.gpa-result {
+  margin-top: 2rem;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 10px rgba(124, 243, 255, 0.4);
+}
+
+.miracle-charts {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}

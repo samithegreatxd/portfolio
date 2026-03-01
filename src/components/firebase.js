@@ -1,13 +1,12 @@
-// Import the functions you need from the SDKs you need
+// firebase.js
+
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getDatabase } from "firebase/database";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Your Firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyBmKPORYgLkD03dYtTT19m-BsNd7PiwixA",
+  apiKey: "YOUR_API_KEY",
   authDomain: "portfolio-a9523.firebaseapp.com",
   projectId: "portfolio-a9523",
   storageBucket: "portfolio-a9523.firebasestorage.app",
@@ -18,4 +17,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+getAnalytics(app);
+
+// Export Realtime Database
+export const db = getDatabase(app);
