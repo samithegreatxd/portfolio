@@ -48,8 +48,8 @@ const PremiumHero = () => {
     <section className="hero-wrapper">
       {showBoot ? (
         <div className="boot-container">
-          <p className="boot-line delay-1">{">"} Initializing identity...</p>
-          <p className="boot-line delay-2">{">"} User detected.</p>
+          <p className="boot-line delay-1">{">"} Initializing...</p>
+          <p className="boot-line delay-2">{">"} Preparing interface.</p>
         </div>
       ) : (
         <div className="hero-card fade-in">
